@@ -28,7 +28,7 @@ export default defineConfig(({ mode }) => {
     css: {
       preprocessorOptions: {
         scss: {
-          // Remove the additionalData section that's causing issues
+          api: "modern-compiler",
         },
       },
     },
