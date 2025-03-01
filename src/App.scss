@@ -1,0 +1,84 @@
+// Only use our custom modules
+@use "styles/variables" as vars;
+@use "styles/mixins";
+
+// Variables
+$font-family-base: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$text-color: #333;
+$background-color: #f9f9f9;
+$link-color: #0066cc;
+$animation-duration: 3s;
+
+// Base styles
+body {
+  font-family: vars.$font-family-base;
+  line-height: 1.6;
+  color: vars.$text-color;
+  background-color: vars.$background-color;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+// Interactive elements
+button {
+  cursor: pointer;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Legacy styles (can be removed if not needed)
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: App-logo-float infinite $animation-duration ease-in-out;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: rgb(112, 76, 182);
+}
+
+// Animations
+@keyframes App-logo-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

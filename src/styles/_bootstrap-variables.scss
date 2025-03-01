@@ -1,0 +1,21 @@
+// Import our variables
+@use "variables" as vars;
+
+// Override Bootstrap variables
+$primary: vars.$primary-color;
+$secondary: vars.$accent-color-2;
+$success: vars.$success-color;
+$info: vars.$secondary-color;
+$warning: vars.$warning-color;
+$danger: vars.$error-color;
+$light: vars.$background-color;
+$dark: vars.$text-color;
+
+// Border variables
+$border-color: vars.$background-color-darker;
+$border-light: vars.$background-color-dark;
+
+// Other Bootstrap customizations
+$enable-shadows: true;
+$enable-gradients: false;
+$enable-responsive-font-sizes: true;

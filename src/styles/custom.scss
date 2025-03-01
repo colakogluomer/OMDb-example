@@ -1,0 +1,72 @@
+// Custom styles that override Bootstrap
+// This file will be imported after Bootstrap CSS
+
+@use "variables" as vars;
+
+// Custom card styles
+.card {
+  border-color: vars.$background-color-dark;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+// Custom table styles
+.table {
+  color: vars.$text-color;
+}
+
+// Custom form control styles
+.form-control:focus,
+.form-select:focus {
+  border-color: vars.$primary-color;
+  box-shadow: 0 0 0 0.25rem rgba(107, 154, 196, 0.25);
+}
+
+// Custom button styles
+.btn-primary {
+  background-color: vars.$primary-color;
+  border-color: vars.$primary-color;
+
+  &:hover,
+  &:focus {
+    background-color: vars.$primary-hover-color;
+    border-color: vars.$primary-hover-color;
+  }
+}
+
+.btn-secondary {
+  background-color: vars.$accent-color-2;
+  border-color: vars.$accent-color-2;
+
+  &:hover,
+  &:focus {
+    background-color: vars.$accent-color-2;
+    border-color: vars.$accent-color-2;
+    filter: brightness(90%);
+  }
+}
+
+// Custom pagination styles
+.pagination {
+  .page-link {
+    color: vars.$primary-color;
+
+    &:focus {
+      box-shadow: 0 0 0 0.25rem rgba(107, 154, 196, 0.25);
+    }
+  }
+
+  .page-item.active .page-link {
+    background-color: vars.$primary-color;
+    border-color: vars.$primary-color;
+  }
+}
+
+// Badge styling
+.badge.bg-primary {
+  background-color: vars.$accent-color-1 !important;
+}
+
+// Background color
+body {
+  background-color: vars.$background-color;
+}
