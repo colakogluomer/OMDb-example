@@ -31,6 +31,20 @@ src/
 ├── shared/                   # Shared utilities and components
 │   └── NotFound.tsx          # 404 page (lazy loaded)
 └── ...                       # Other app files (store, hooks, etc.)
+.env
+.env-example
+.eslintrc.json
+.gitignore
+.prettierrc.json
+docker-compose.yml
+Dockerfile
+index.html
+package.json
+README.md
+sass.config.js
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
 ```
 
 ## Getting Started
