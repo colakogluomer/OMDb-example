@@ -1,5 +1,5 @@
 import React from "react"
-import { Movie } from "../moviesApiSlice"
+import { Movie } from "../../../store/movies/moviesApiSlice"
 import styles from "../Movies.module.scss"
 import MoviePlaceholder from "./MoviePlaceholder"
 

@@ -1,6 +1,5 @@
 import React from "react"
 import styles from "../Movies.module.scss"
-
 interface PaginationProps {
   currentPage: number
   totalPages: number

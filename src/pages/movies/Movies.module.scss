@@ -1,30 +1,12 @@
 @use "../../styles/variables" as vars;
 @use "../../styles/mixins";
 
-// Variables
-$primary-color: #0066cc;
-$primary-hover-color: #0055aa;
-$secondary-color: #f2f2f2;
-$border-color: #ccc;
-$border-light: #ddd;
-$text-color: #333;
-$text-muted: #666;
-$error-color: #cc0000;
-$award-color: #cc9900;
-$border-radius: 4px;
-$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-$spacing-sm: 8px;
-$spacing-md: 15px;
-$spacing-lg: 20px;
-$spacing-xl: 30px;
-$breakpoint-md: 768px;
-
 // Container styles
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: vars.$spacing-lg;
-}
+// .container {
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: vars.$spacing-lg;
+// }
 
 // Custom styles that override Bootstrap
 .heading {
@@ -49,8 +31,8 @@ $breakpoint-md: 768px;
 .searchInput {
   flex: 1;
   padding: 10px;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
+  border: 1px solid vars.$border-color;
+  border-radius: vars.$border-radius;
   font-size: 16px;
 }
 
@@ -70,14 +52,14 @@ $breakpoint-md: 768px;
 
 .filterOptions {
   display: flex;
-  gap: $spacing-lg;
+  gap: vars.$spacing-lg;
   align-items: center;
 }
 
 .filterItem {
   display: flex;
   align-items: center;
-  gap: $spacing-sm;
+  gap: vars.$spacing-sm;
 }
 
 .yearInput,
@@ -91,7 +73,7 @@ $breakpoint-md: 768px;
 .moviesTable {
   width: 100%;
   border-collapse: collapse;
-  margin-top: $spacing-lg;
+  margin-top: vars.$spacing-lg;
 }
 
 .tableHeader {
@@ -245,22 +227,22 @@ $breakpoint-md: 768px;
 .detailsContainer {
   max-width: 1000px;
   margin: 0 auto;
-  padding: $spacing-lg;
+  padding: vars.$spacing-lg;
 }
 
 .backButton {
-  padding: $spacing-sm 16px;
-  background-color: $secondary-color;
+  padding: vars.$spacing-sm 16px;
+  background-color: vars.$secondary-color;
   border: none;
-  border-radius: $border-radius;
+  border-radius: vars.$border-radius;
   cursor: pointer;
-  margin-bottom: $spacing-lg;
+  margin-bottom: vars.$spacing-lg;
   display: inline-block;
 }
 
 .movieDetails {
   display: flex;
-  gap: $spacing-xl;
+  gap: vars.$spacing-xl;
 }
 
 .posterContainer {
@@ -269,8 +251,8 @@ $breakpoint-md: 768px;
 
 .detailsPoster {
   width: 100%;
-  border-radius: $border-radius;
-  box-shadow: $box-shadow;
+  border-radius: vars.$border-radius;
+  box-shadow: vars.$box-shadow;
 }
 
 .detailsInfo {
@@ -279,18 +261,18 @@ $breakpoint-md: 768px;
 
 .metaInfo {
   display: flex;
-  gap: $spacing-md;
-  margin-bottom: $spacing-lg;
-  color: $text-muted;
+  gap: vars.$spacing-md;
+  margin-bottom: vars.$spacing-lg;
+  color: vars.$text-muted;
 }
 
 .rating {
-  margin-bottom: $spacing-lg;
+  margin-bottom: vars.$spacing-lg;
   font-size: 18px;
 }
 
 .plot {
-  margin-bottom: $spacing-lg;
+  margin-bottom: vars.$spacing-lg;
 
   h3 {
     margin-bottom: 10px;
@@ -298,28 +280,28 @@ $breakpoint-md: 768px;
 }
 
 .credits {
-  margin-bottom: $spacing-lg;
+  margin-bottom: vars.$spacing-lg;
 }
 
 .awards {
-  margin-bottom: $spacing-lg;
-  color: $award-color;
+  margin-bottom: vars.$spacing-lg;
+  color: vars.$award-color;
 }
 
 .additionalInfo {
-  color: $text-muted;
+  color: vars.$text-muted;
   font-size: 14px;
 }
 
 // Responsive styles
-@media (max-width: $breakpoint-md) {
+@media (max-width: vars.$breakpoint-md) {
   .movieDetails {
     flex-direction: column;
   }
 
   .posterContainer {
     flex: 0 0 auto;
-    margin-bottom: $spacing-lg;
+    margin-bottom: vars.$spacing-lg;
   }
 
   .filterOptions {

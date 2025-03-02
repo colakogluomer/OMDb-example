@@ -1,6 +1,6 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit"
-import { moviesApiSlice } from "../features/movies/moviesApiSlice"
-import moviesReducer from "../features/movies/moviesSlice"
+import { moviesApiSlice } from "./movies/moviesApiSlice"
+import moviesReducer from "./movies/moviesSlice"
 
 // Define the store configuration
 export const makeStore = (preloadedState = {}) => {

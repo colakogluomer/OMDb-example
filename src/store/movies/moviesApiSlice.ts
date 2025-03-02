@@ -66,8 +66,8 @@ export const moviesApiSlice = createApi({
         })
 
         // Add optional parameters if they exist
-        if (year) params.append("y", year)
-        if (type) params.append("type", type)
+        year && params.append("y", year)
+        type && params.append("type", type)
 
         return `/?${params.toString()}`
       },

@@ -1,6 +1,6 @@
 import React from "react"
 import { useParams, useNavigate } from "react-router-dom"
-import { useGetMovieDetailsQuery } from "./moviesApiSlice"
+import { useGetMovieDetailsQuery } from "../../store/movies/moviesApiSlice"
 import styles from "./Movies.module.scss"
 import MoviePlaceholder from "./components/MoviePlaceholder"
 import DetailsSkeleton from "./components/DetailsSkeleton"
