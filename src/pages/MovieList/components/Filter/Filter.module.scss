@@ -1,5 +1,4 @@
 @use "../../../../styles/variables" as vars;
-@use "../../../../styles/mixins";
 
 .filters {
   background-color: vars.$background-color-dark;
@@ -20,20 +19,6 @@
   border: 1px solid vars.$border-color;
   border-radius: vars.$border-radius;
   font-size: 16px;
-}
-
-.searchButton {
-  @include mixins.primary-button;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: vars.$primary-color !important;
-  border-color: vars.$primary-color !important;
-
-  &:hover,
-  &:focus {
-    background-color: vars.$primary-hover-color !important;
-    border-color: vars.$primary-hover-color !important;
-  }
 }
 
 .filterOptions {

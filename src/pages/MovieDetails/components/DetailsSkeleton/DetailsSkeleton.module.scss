@@ -1,20 +1,5 @@
 @use "../../../../styles/variables" as vars;
-@use "../../../../styles/mixins";
 @use "../../../../styles/placeholders";
-
-.detailsPlaceholder {
-  width: 100%;
-  height: 450px;
-
-  .placeholderIcon {
-    width: 64px;
-    height: 64px;
-  }
-
-  .placeholderText {
-    font-size: 16px;
-  }
-}
 
 .skeletonButton {
   @extend %skeleton-base;

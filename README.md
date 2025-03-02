@@ -34,7 +34,8 @@ A modern React application built with TypeScript that allows users to search and
    # or
    yarn install
    ```
-You may skip the third one since I will not add .env file to the gitignore for the use-case purposes.
+
+   You may skip the third one since I will not add .env file to the gitignore for the use-case purposes.
 
 3. Create a `.env` file in the root directory with your OMDb API key:
 
@@ -53,7 +54,7 @@ You may skip the third one since I will not add .env file to the gitignore for t
    yarn dev
    ```
 
-5. Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
+5. Open [http://localhost:5173](http://localhost:5173) to view the app in your browser.
 
 ## Building for Production
 
@@ -105,22 +106,16 @@ It's recommended to add the following files to your `.gitignore`:
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# lock files (optional)
-package-lock.json
-yarn.lock
 ```
-
-Adding `package-lock.json` to `.gitignore` can help prevent merge conflicts in team environments where developers might use different npm versions. However, for consistent dependency installation across environments, you might want to keep it in version control.
 
 ## Technologies Used
 
-- **React 18** - UI library
+- **React** - UI library
 - **TypeScript** - Type safety
 - **Redux Toolkit** - State management
 - **React Router** - Navigation
 - **Vite** - Build tool
-- **SCSS Modules** - Styling
+- **CSS/SCSS** - Styling
 - **Bootstrap** - UI components
 - **React Lazy/Suspense** - Code splitting
 
