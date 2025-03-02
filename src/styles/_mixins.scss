@@ -1,0 +1,30 @@
+@use "variables" as vars;
+
+// Common mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-base {
+  padding: vars.$spacing-sm 16px;
+  border: none;
+  border-radius: vars.$border-radius;
+  cursor: pointer;
+}
+
+@mixin primary-button {
+  @include button-base;
+  background-color: vars.$primary-color;
+  color: white;
+
+  &:hover {
+    background-color: vars.$primary-hover-color;
+  }
+
+  &:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+}

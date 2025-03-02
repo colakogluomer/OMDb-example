@@ -10,18 +10,24 @@ const NotFound = lazy(() => import("./shared/NotFound"))
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<MovieList />} />
-        <Route path="/movie/:imdbID" element={<MovieDetails />} />
-        <Route
-          path="*"
-          element={
-            <Suspense fallback={<h2>Loading...</h2>}>
-              <NotFound />
-            </Suspense>
-          }
-        />
-      </Routes>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<MovieList />} />
+
+          {/* MovieDetails sayfası Lazy Load edildi */}
+          <Route path="/movie/:imdbID" element={<MovieDetails />} />
+
+          {/* 404 Not Found sayfası */}
+          <Route
+            path="*"
+            element={
+              <Suspense fallback={<h2>Loading...</h2>}>
+                <NotFound />
+              </Suspense>
+            }
+          />
+        </Routes>
+      </div>
     </Router>
   )
 }

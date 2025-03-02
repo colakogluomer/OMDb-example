@@ -25,10 +25,14 @@ const MovieList: React.FC = () => {
   const navigate = useNavigate()
   const dispatch = useAppDispatch()
 
-  const searchTerm = useAppSelector(selectSearchTerm)
-  const currentPage = useAppSelector(selectCurrentPage)
-  const selectedYear = useAppSelector(selectSelectedYear)
-  const selectedType = useAppSelector(selectSelectedType)
+  // State from Redux
+  const { searchTerm, currentPage, selectedYear, selectedType } =
+    useAppSelector(state => ({
+      searchTerm: selectSearchTerm(state),
+      currentPage: selectCurrentPage(state),
+      selectedYear: selectSelectedYear(state),
+      selectedType: selectSelectedType(state),
+    }))
 
   const [totalPages, setTotalPages] = useState(0)
 

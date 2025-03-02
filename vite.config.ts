@@ -3,7 +3,8 @@ import react from "@vitejs/plugin-react"
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  // If you wanna specify the env file for each environment, you can do it like this:
+  // Load env file based on `mode` in the current directory.
+  // Set the third parameter to '' to load all env regardless of the `VITE_` prefix.
   const env = loadEnv(mode, process.cwd(), "")
 
   return {
@@ -13,7 +14,16 @@ export default defineConfig(({ mode }) => {
       open: true,
     },
     define: {
+      // Make env variables available in the client code
+      // Note: Vite automatically exposes variables prefixed with VITE_
+      // This is just for demonstration
       __APP_ENV__: JSON.stringify(env.NODE_ENV),
+    },
+    test: {
+      globals: true,
+      environment: "jsdom",
+      setupFiles: "src/setupTests",
+      mockReset: true,
     },
     css: {
       preprocessorOptions: {
