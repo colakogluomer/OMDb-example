@@ -59,8 +59,8 @@ vite.config.ts
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/movie-database.git
-   cd movie-database
+   git clone https://github.com/colakogluomer/OMDb-example.git
+   cd OMDB-example
    ```
 
 2. Install dependencies:
