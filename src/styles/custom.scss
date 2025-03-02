@@ -58,6 +58,8 @@
   .page-item.active .page-link {
     background-color: vars.$primary-color;
     border-color: vars.$primary-color;
+    color: white;
+    font-weight: 500;
   }
 }
 

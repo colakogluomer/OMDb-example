@@ -1,0 +1,65 @@
+@use "../../styles/variables" as vars;
+@use "../../styles/mixins";
+
+.backButton {
+  padding: vars.$spacing-sm 16px;
+  background-color: vars.$secondary-color;
+  border: none;
+  border-radius: vars.$border-radius;
+  cursor: pointer;
+  margin-bottom: vars.$spacing-lg;
+  display: inline-block;
+}
+
+.movieDetails {
+  display: flex;
+  gap: vars.$spacing-xl;
+}
+
+.posterContainer {
+  flex: 0 0 300px;
+}
+
+.detailsPoster {
+  width: 100%;
+  border-radius: vars.$border-radius;
+  box-shadow: vars.$box-shadow;
+}
+
+.detailsInfo {
+  flex: 1;
+}
+
+.metaInfo {
+  display: flex;
+  gap: vars.$spacing-md;
+  margin-bottom: vars.$spacing-lg;
+  color: vars.$text-muted;
+}
+
+.rating {
+  margin-bottom: vars.$spacing-lg;
+  font-size: 18px;
+}
+
+.plot {
+  margin-bottom: vars.$spacing-lg;
+
+  h3 {
+    margin-bottom: 10px;
+  }
+}
+
+.credits {
+  margin-bottom: vars.$spacing-lg;
+}
+
+.awards {
+  margin-bottom: vars.$spacing-lg;
+  color: vars.$award-color;
+}
+
+.additionalInfo {
+  color: vars.$text-muted;
+  font-size: 14px;
+}

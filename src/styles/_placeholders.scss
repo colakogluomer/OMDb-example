@@ -1,0 +1,13 @@
+@use "./variables" as vars;
+
+%skeleton-base {
+  background: linear-gradient(
+    to right,
+    vars.$background-color-dark 8%,
+    vars.$background-color 18%,
+    vars.$background-color-dark 33%
+  );
+  background-size: 800px 104px;
+  animation: shimmer 1.5s infinite linear;
+  border-radius: 4px;
+}

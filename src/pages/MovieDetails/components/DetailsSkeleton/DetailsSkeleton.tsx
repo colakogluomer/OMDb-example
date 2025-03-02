@@ -1,6 +1,4 @@
-import React from "react"
-import styles from "../Movies.module.scss"
-
+import styles from "./DetailsSkeleton.module.scss"
 const DetailsSkeleton: React.FC = () => {
   return (
     <div className="container py-4">

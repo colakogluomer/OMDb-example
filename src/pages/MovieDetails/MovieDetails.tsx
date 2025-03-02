@@ -1,9 +1,8 @@
-import React from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import { useGetMovieDetailsQuery } from "../../store/movies/moviesApiSlice"
-import styles from "./Movies.module.scss"
-import MoviePlaceholder from "./components/MoviePlaceholder"
-import DetailsSkeleton from "./components/DetailsSkeleton"
+import MoviePlaceholder from "../../shared/MoviePlaceholder/MoviePlaceholder"
+import DetailsSkeleton from "./components/DetailsSkeleton/DetailsSkeleton"
+import styles from "./MovieDetails.module.scss"
 
 const MovieDetails: React.FC = () => {
   const { imdbID } = useParams<{ imdbID: string }>()

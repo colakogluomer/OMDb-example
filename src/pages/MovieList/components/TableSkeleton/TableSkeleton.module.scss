@@ -1,0 +1,47 @@
+@use "../../../../styles/placeholders";
+@use "../../../../styles/variables" as vars;
+
+.tableHeader {
+  background-color: vars.$secondary-color;
+  color: vars.$text-color;
+
+  th {
+    border-bottom: none;
+  }
+}
+.skeletonRow {
+  td {
+    padding: 12px 8px;
+  }
+}
+
+.skeletonPoster {
+  @extend %skeleton-base;
+  width: 50px;
+  height: 75px;
+}
+
+.skeletonText {
+  @extend %skeleton-base;
+  height: 20px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.skeletonYear {
+  @extend %skeleton-base;
+  height: 20px;
+  width: 60px;
+}
+
+.skeletonType {
+  @extend %skeleton-base;
+  height: 20px;
+  width: 80px;
+}
+
+.skeletonId {
+  @extend %skeleton-base;
+  height: 20px;
+  width: 100px;
+}

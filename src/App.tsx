@@ -1,10 +1,10 @@
 import { lazy, Suspense } from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import MovieList from "./pages/movies/MovieList"
+import MovieList from "./pages/MovieList/MovieList"
 import "./App.scss"
 
 // Lazy load MovieDetails component
-const MovieDetails = lazy(() => import("./pages/movies/MovieDetails"))
+const MovieDetails = lazy(() => import("./pages/MovieDetails/MovieDetails"))
 const NotFound = lazy(() => import("./shared/NotFound"))
 
 function App() {

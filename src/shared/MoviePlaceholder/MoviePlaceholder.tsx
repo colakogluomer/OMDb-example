@@ -1,5 +1,4 @@
-import React from "react"
-import styles from "../Movies.module.scss"
+import styles from "./MoviePlaceholder.module.scss"
 
 interface MoviePlaceholderProps {
   title?: string

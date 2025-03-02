@@ -1,8 +1,6 @@
-import React from "react"
-import { Movie } from "../../../store/movies/moviesApiSlice"
-import styles from "../Movies.module.scss"
-import MoviePlaceholder from "./MoviePlaceholder"
-
+import MoviePlaceholder from "../../../../shared/MoviePlaceholder/MoviePlaceholder"
+import type { Movie } from "../../../../store/movies/moviesApiSlice"
+import styles from "./MovieTable.module.scss"
 interface MovieTableProps {
   movies: Movie[]
   onMovieClick: (imdbID: string) => void
@@ -17,8 +15,8 @@ const MovieTable: React.FC<MovieTableProps> = ({ movies, onMovieClick }) => {
             <th>Poster</th>
             <th>Title</th>
             <th>Year</th>
-            <th className="d-none d-md-table-cell">Type</th>
-            <th className="d-none d-lg-table-cell">IMDb ID</th>
+            <th>Type</th>
+            <th>IMDb ID</th>
           </tr>
         </thead>
         <tbody>
@@ -46,8 +44,8 @@ const MovieTable: React.FC<MovieTableProps> = ({ movies, onMovieClick }) => {
               </td>
               <td className={styles.movieTitle}>{movie.Title}</td>
               <td>{movie.Year}</td>
-              <td className="d-none d-md-table-cell">{movie.Type}</td>
-              <td className="d-none d-lg-table-cell">{movie.imdbID}</td>
+              <td>{movie.Type}</td>
+              <td>{movie.imdbID}</td>
             </tr>
           ))}
         </tbody>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { useAppSelector, useAppDispatch } from "../../store/hooks"
 import {
@@ -12,14 +12,14 @@ import {
   setSelectedType,
 } from "../../store/movies/moviesSlice"
 import { useSearchMoviesQuery } from "../../store/movies/moviesApiSlice"
-import styles from "./Movies.module.scss"
+import styles from "./MovieList.module.scss"
 
 // Components
-import Filter from "./components/Filter"
-import MovieTable from "./components/MovieTable"
-import Pagination from "./components/Pagination"
-import ScrollToTop from "./components/ScrollToTop"
-import TableSkeleton from "./components/TableSkeleton"
+import Filter from "./components/Filter/Filter"
+import MovieTable from "./components/MovieTable/MovieTable"
+import Pagination from "./components/Pagination/Pagination"
+import ScrollToTop from "../../shared/ScrollToTop/ScrollToTop"
+import TableSkeleton from "./components/TableSkeleton/TableSkeleton"
 
 const MovieList: React.FC = () => {
   const navigate = useNavigate()
@@ -90,11 +90,13 @@ const MovieList: React.FC = () => {
             Found {data!.totalResults} results
           </div>
           <MovieTable movies={data!.Search} onMovieClick={handleMovieClick} />
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={handlePageChange}
-          />
+          <div className="d-flex justify-content-center mt-4">
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={handlePageChange}
+            />
+          </div>
         </>
       )}
 

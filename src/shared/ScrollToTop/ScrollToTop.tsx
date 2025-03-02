@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react"
-import styles from "../Movies.module.scss"
+import { useState, useEffect } from "react"
+import styles from "./ScrollToTop.module.scss"
 
 const ScrollToTop: React.FC = () => {
   const [showScrollTop, setShowScrollTop] = useState(false)

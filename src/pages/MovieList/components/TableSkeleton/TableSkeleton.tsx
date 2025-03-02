@@ -1,5 +1,4 @@
-import React from "react"
-import styles from "../Movies.module.scss"
+import styles from "./TableSkeleton.module.scss"
 
 interface TableSkeletonProps {
   rows?: number

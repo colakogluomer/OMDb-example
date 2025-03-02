@@ -1,0 +1,24 @@
+@use "../../styles/variables" as vars;
+
+.heading {
+  margin-bottom: 1.5rem;
+  color: vars.$primary-color;
+}
+
+.loading,
+.error,
+.noResults {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 18px;
+}
+
+.error {
+  color: vars.$error-color;
+}
+
+.results {
+  margin: 10px 0;
+  font-style: italic;
+  color: vars.$text-muted;
+}
