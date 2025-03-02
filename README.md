@@ -15,7 +15,7 @@ A modern React application built with TypeScript that allows users to search and
 
 ### Prerequisites
 
-- Node.js (v14 or later)
+- Node.js (v20 or later)
 - npm or yarn
 
 ### Installation
@@ -68,45 +68,30 @@ yarn build
 
 The built files will be in the `dist` directory.
 
+## Running with Docker
+
+If you prefer to run the app in a Docker container, follow these steps:
+
+1. Ensure Docker is installed on your machine.
+
+2. Create a .env file in the root directory with the required environment variables.
+
+3. Run the following command in the root directory:
+
+```bash
+docker-compose up
+```
+
+4. The application should now be running at http://localhost:8080
+
 ## Environment Variables
 
-| Variable          | Description               | Default                 |
-| ----------------- | ------------------------- | ----------------------- |
-| VITE_API_KEY      | Your OMDb API key         | -                       |
-| VITE_API_BASE_URL | Base URL for the OMDb API | https://www.omdbapi.com |
-
-## Development Guidelines
-
-### Git Configuration
-
-It's recommended to add the following files to your `.gitignore`:
-
-```
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
-/dist
-/build
-
-# misc
-.DS_Store
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-```
+| Variable             | Description               | Default                               |
+| -------------------- | ------------------------- | ------------------------------------- |
+| VITE_API_KEY         | Your OMDb API key         | ffb727ec                              |
+| VITE_API_BASE_URL    | Base URL for the OMDb API | https://www.omdbapi.com               |
+| VITE_APP_TITLE       | App Title                 | Movie Database                        |
+| VITE_APP_DESCRIPTION | App Description           | Search for movies, TV shows, and more |
 
 ## Technologies Used
 
@@ -118,7 +103,3 @@ yarn-error.log*
 - **CSS/SCSS** - Styling
 - **Bootstrap** - UI components
 - **React Lazy/Suspense** - Code splitting
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
