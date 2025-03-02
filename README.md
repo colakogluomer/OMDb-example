@@ -11,42 +11,6 @@ A modern React application built with TypeScript that allows users to search and
 - **Skeleton Loading**: Visual feedback during data fetching with skeleton loaders
 - **Pagination**: Navigate through search results with an intuitive pagination system
 
-## Project Structure
-
-```
-src/
-├── App.scss                  # Main application styles
-├── App.tsx                   # Main application component with routing
-├── pages/                    # Page components organized by feature
-│   └── movies/               # Movie-related pages and components
-│       ├── Movies.module.scss # Movie-specific styles
-│       ├── MovieList.tsx     # Movie listing page
-│       ├── MovieDetails.tsx  # Movie details page (lazy loaded)
-│       └── components/       # Movie-specific components
-│           ├── Filter.tsx    # Search and filter component
-│           ├── MoviePlaceholder.tsx # Placeholder for missing movie posters
-│           ├── MovieTable.tsx # Table display for movie results
-│           ├── Pagination.tsx # Pagination component
-│           └── ScrollToTop.tsx # Utility for scrolling to top
-├── shared/                   # Shared utilities and components
-│   └── NotFound.tsx          # 404 page (lazy loaded)
-└── ...                       # Other app files (store, hooks, etc.)
-.env
-.env-example
-.eslintrc.json
-.gitignore
-.prettierrc.json
-docker-compose.yml
-Dockerfile
-index.html
-package.json
-README.md
-sass.config.js
-tsconfig.json
-tsconfig.node.json
-vite.config.ts
-```
-
 ## Getting Started
 
 ### Prerequisites
