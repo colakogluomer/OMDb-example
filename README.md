@@ -95,6 +95,45 @@ The built files will be in the `dist` directory.
 | VITE_API_KEY      | Your OMDb API key         | -                       |
 | VITE_API_BASE_URL | Base URL for the OMDb API | https://www.omdbapi.com |
 
+## Development Guidelines
+
+### Git Configuration
+
+It's recommended to add the following files to your `.gitignore`:
+
+```
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/dist
+/build
+
+# misc
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# lock files (optional)
+package-lock.json
+yarn.lock
+```
+
+Adding `package-lock.json` to `.gitignore` can help prevent merge conflicts in team environments where developers might use different npm versions. However, for consistent dependency installation across environments, you might want to keep it in version control.
+
 ## Technologies Used
 
 - **React 18** - UI library
