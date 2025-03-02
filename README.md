@@ -35,6 +35,7 @@ A modern React application built with TypeScript that allows users to search and
    yarn install
    ```
 You may skip the third one since I will not add .env file to the gitignore for the use-case purposes.
+
 3. Create a `.env` file in the root directory with your OMDb API key:
 
    ```
