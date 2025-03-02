@@ -119,10 +119,7 @@ const Filter: React.FC<FilterProps> = ({
 
         {/* Search button column */}
         <div className="col-md-3 d-flex align-items-end">
-          <button
-            type="submit"
-            className={`${styles.searchButton} btn btn-primary w-100`}
-          >
+          <button type="submit" className={"btn btn-primary w-100"}>
             Search
           </button>
         </div>

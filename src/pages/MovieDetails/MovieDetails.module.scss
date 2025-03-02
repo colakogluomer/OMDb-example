@@ -1,5 +1,18 @@
 @use "../../styles/variables" as vars;
-@use "../../styles/mixins";
+
+.detailsPlaceholder {
+  width: 100%;
+  height: 450px;
+
+  .placeholderIcon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .placeholderText {
+    font-size: 16px;
+  }
+}
 
 .backButton {
   padding: vars.$spacing-sm 16px;

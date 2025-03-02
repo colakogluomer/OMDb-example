@@ -15,22 +15,34 @@ A modern React application built with TypeScript that allows users to search and
 
 ```
 src/
-├── App.scss                  # Main application styles
-├── App.tsx                   # Main application component with routing
-├── pages/                    # Page components organized by feature
-│   └── movies/               # Movie-related pages and components
-│       ├── Movies.module.scss # Movie-specific styles
-│       ├── MovieList.tsx     # Movie listing page
-│       ├── MovieDetails.tsx  # Movie details page (lazy loaded)
-│       └── components/       # Movie-specific components
-│           ├── Filter.tsx    # Search and filter component
-│           ├── MoviePlaceholder.tsx # Placeholder for missing movie posters
-│           ├── MovieTable.tsx # Table display for movie results
-│           ├── Pagination.tsx # Pagination component
-│           └── ScrollToTop.tsx # Utility for scrolling to top
-├── shared/                   # Shared utilities and components
-│   └── NotFound.tsx          # 404 page (lazy loaded)
-└── ...                       # Other app files (store, hooks, etc.)
+├── api/                     # API service and configuration
+│   └── omdbApi.ts           # OMDb API integration
+├── components/              # Reusable UI components
+│   ├── Filter/              # Search and filter components
+│   ├── MovieCard/           # Movie card display component
+│   ├── MovieDetails/        # Movie details component
+│   ├── MovieList/           # Movie listing component
+│   ├── Pagination/          # Pagination controls
+│   └── Skeleton/            # Loading skeleton components
+├── hooks/                   # Custom React hooks
+│   └── useDebounce.ts       # Debounce hook for search input
+├── pages/                   # Page components
+│   ├── Home/                # Home page
+│   ├── MovieDetail/         # Movie details page
+│   └── NotFound/            # 404 page
+├── store/                   # Redux store configuration
+│   ├── slices/              # Redux slices
+│   │   └── movieSlice.ts    # Movie-related state management
+│   └── store.ts             # Redux store setup
+├── styles/                  # Global styles
+│   └── global.css           # Global CSS styles
+├── types/                   # TypeScript type definitions
+│   └── movie.types.ts       # Movie-related type definitions
+├── utils/                   # Utility functions
+│   └── helpers.ts           # Helper functions
+├── App.tsx                  # Main application component
+├── main.tsx                 # Application entry point
+└── vite-env.d.ts            # Vite type declarations
 ```
 
 ## Getting Started
@@ -74,7 +86,7 @@ src/
    yarn dev
    ```
 
-5. Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
+5. Open [http://localhost:5173](http://localhost:5173) to view the app in your browser.
 
 ## Building for Production
 
@@ -126,22 +138,16 @@ It's recommended to add the following files to your `.gitignore`:
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# lock files (optional)
-package-lock.json
-yarn.lock
 ```
-
-Adding `package-lock.json` to `.gitignore` can help prevent merge conflicts in team environments where developers might use different npm versions. However, for consistent dependency installation across environments, you might want to keep it in version control.
 
 ## Technologies Used
 
-- **React 18** - UI library
+- **React** - UI library
 - **TypeScript** - Type safety
 - **Redux Toolkit** - State management
 - **React Router** - Navigation
 - **Vite** - Build tool
-- **SCSS Modules** - Styling
+- **CSS/SCSS** - Styling
 - **Bootstrap** - UI components
 - **React Lazy/Suspense** - Code splitting
 
