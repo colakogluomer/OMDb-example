@@ -11,28 +11,6 @@ A modern React application built with TypeScript that allows users to search and
 - **Skeleton Loading**: Visual feedback during data fetching with skeleton loaders
 - **Pagination**: Navigate through search results with an intuitive pagination system
 
-## Project Structure
-
-```
-src/
-├── App.scss                  # Main application styles
-├── App.tsx                   # Main application component with routing
-├── pages/                    # Page components organized by feature
-│   └── movies/               # Movie-related pages and components
-│       ├── Movies.module.scss # Movie-specific styles
-│       ├── MovieList.tsx     # Movie listing page
-│       ├── MovieDetails.tsx  # Movie details page (lazy loaded)
-│       └── components/       # Movie-specific components
-│           ├── Filter.tsx    # Search and filter component
-│           ├── MoviePlaceholder.tsx # Placeholder for missing movie posters
-│           ├── MovieTable.tsx # Table display for movie results
-│           ├── Pagination.tsx # Pagination component
-│           └── ScrollToTop.tsx # Utility for scrolling to top
-├── shared/                   # Shared utilities and components
-│   └── NotFound.tsx          # 404 page (lazy loaded)
-└── ...                       # Other app files (store, hooks, etc.)
-```
-
 ## Getting Started
 
 ### Prerequisites
@@ -45,8 +23,8 @@ src/
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/movie-database.git
-   cd movie-database
+   git clone https://github.com/colakogluomer/OMDb-example.git
+   cd OMDB-example
    ```
 
 2. Install dependencies:
@@ -56,6 +34,7 @@ src/
    # or
    yarn install
    ```
+You may skip the third one since I will not add .env file to the gitignore for the use-case purposes.
 
 3. Create a `.env` file in the root directory with your OMDb API key:
 
